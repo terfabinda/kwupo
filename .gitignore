@@ -1,0 +1,32 @@
+# ----------------------------
+# KWUPO Website - .gitignore
+# ----------------------------
+
+# Database & configuration files
+/includes/config.php
+/.env
+*.sql
+*.log
+
+# Uploaded user content (keep directories, ignore files)
+/uploads/incident_media/*
+!/uploads/incident_media/.gitkeep
+/uploads/profiles/*
+!/uploads/profiles/.gitkeep
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+
+# Backup & temporary files
+*.tmp
+*.temp

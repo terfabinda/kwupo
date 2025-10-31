@@ -1,0 +1,47 @@
+# ===========================================
+# KWUPO — Development & Production Ready
+# ===========================================
+
+Options -Indexes
+RewriteEngine On
+
+# ===== DYNAMIC SITEMAP =====
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# ===== ONLY ENFORCE HTTPS + DOMAIN IN PRODUCTION =====
+# Skip redirects if NOT on kwupo.org.ng (i.e., localhost, 127.0.0.1, etc.)
+RewriteCond %{HTTP_HOST} !^kwupo\.org\.ng$ [NC]
+RewriteCond %{HTTP_HOST} !^www\.kwupo\.org\.ng$ [NC]
+RewriteRule ^ - [S=2]
+
+# Redirect HTTP → HTTPS (production only)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://kwupo.org.ng/$1 [R=301,L]
+
+# Redirect www → non-www (production only)
+RewriteCond %{HTTP_HOST} ^www\.kwupo\.org\.ng$ [NC]
+RewriteRule ^(.*)$ https://kwupo.org.ng/$1 [R=301,L]
+
+# ===== CLEAN URLS (works everywhere) =====
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# AJAX handlers
+RewriteRule ^signup-handler$ assets/php/signup-handler.php [L]
+RewriteRule ^get-wards$ assets/php/get-wards.php [L]
+RewriteRule ^signin-handler$ assets/php/signin-handler.php [L]
+RewriteRule ^forgot-password-handler$ assets/php/forgot-password-handler.php [L]
+
+# ===== SECURITY =====
+<FilesMatch "\.(env|log|ini|sql|sh|conf|htaccess|git)$">
+  Require all denied
+</FilesMatch>
+
+RedirectMatch 403 ^/includes/.*$
+
+# ===== ERROR PAGES =====
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+ErrorDocument 403 /403.php
