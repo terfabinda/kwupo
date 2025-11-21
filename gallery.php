@@ -10,8 +10,8 @@ require 'includes/helpers.php';
   <div class="container">
     <div class="hero-content">
       <div class="hero-col hero-col-text">
-        <h1>Sign In</h1>
-        <p class="tagline">Access your KWUPO member dashboard</p>
+        <h1>Gallery</h1>
+        <p class="tagline">Photos and Images about KWUPO Activities</p>
       </div>
       <div class="hero-col hero-col-image">
         <img src="<?= base_url('assets/img/signin-hero.jpg') ?>" alt="KWUPO Member Login">
@@ -22,39 +22,9 @@ require 'includes/helpers.php';
 
 <section class="section">
   <div class="container">
-    <div id="signin-container">
-      <h2>Welcome Back</h2>
-
-      <div id="alert-box" style="display:none;" class="alert"></div>
-
-      <form id="signin-form" class="signin-form">
-        <div class="form-group">
-          <label for="identifier">Phone or Email <span>*</span></label>
-          <input type="text" 
-                 id="identifier" 
-                 name="identifier" 
-                 placeholder="08012345678 or email@example.com"
-                 required>
-        </div>
-
-        <div class="form-group">
-          <label for="password">Password <span>*</span></label>
-          <input type="password" id="password" name="password" required>
-        </div>
-
-        <div class="form-checkboxes">
-          <label>
-            <input type="checkbox" name="remember"> Remember me
-          </label>
-        </div>
-
-        <button type="submit" class="btn">Sign In</button>
-      </form>
-
-      <div class="form-footer">
-        <p><a href="<?= base_url('forgot-password') ?>">Forgot your password?</a></p>
-        <p>Don't have an account? <a href="<?= base_url('signup') ?>">Join KWUPO today</a></p>
-      </div>
+    <div id="gallery-container">
+      <h2>Gallery Coming Soon</h2>
+      <p>Our gallery is currently under development. Please check back later to see photos and images from KWUPO events and activities.</p>
     </div>
   </div>
 </section>

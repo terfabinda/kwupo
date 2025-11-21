@@ -1,7 +1,7 @@
 <?php include 'includes/header.php'; ?>
 
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="hero-section hero-compact">
   <div class="container">
     <div class="hero-content">
       <div class="hero-col hero-col-text">
@@ -33,7 +33,7 @@
       <h2 class="section-title">Our Pillars</h2>
       <div class="pillars-grid">
         <div class="pillar">
-          <h3>.Unity & Identity </h3>
+          <h3>Unity & Identity </h3>
           <p>Strengthening bonds among Kwande and Ushongo people through cultural festivals, language preservation, and shared historical awareness.</p>
         </div>
         <div class="pillar">

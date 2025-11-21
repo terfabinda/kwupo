@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Report — BSEBdirect.live (2024)</title>
+  <style>
+    @media print {
+      body { -webkit-print-color-adjust: exact; }
+      .no-print { display: none; }
+    }
+    body {
+      font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 25px;
+      background: #f9f9f9;
+    }
+    .report {
+      background: white;
+      padding: 45px;
+      border-radius: 8px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+      border-bottom: 3px double #1a5276;
+      padding-bottom: 20px;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #154360;
+    }
+    .report-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2874A6;
+      margin: 12px 0 6px;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+    .to-section {
+      margin-bottom: 30px;
+      padding-left: 10px;
+      border-left: 4px solid #3498DB;
+    }
+    .to-section p {
+      margin: 6px 0;
+    }
+    .section {
+      margin: 32px 0;
+    }
+    .section-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #154360;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #eee;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      padding: 11px 14px;
+      text-align: left;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    th {
+      background-color: #f0f7ff;
+      font-weight: 600;
+      color: #1a5276;
+    }
+    .total-row {
+      font-weight: bold;
+      background-color: #e8f4fc;
+    }
+    .grand-total {
+      font-size: 20px;
+      text-align: right;
+      padding: 14px 20px;
+      background-color: #d5f5e3;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    .note {
+      font-size: 13px;
+      color: #555;
+      background-color: #fcf9e9;
+      padding: 12px 16px;
+      border-left: 4px solid #f1c40f;
+      margin-top: 25px;
+    }
+    .signature {
+      margin-top: 50px;
+      text-align: left;
+    }
+    .signature-line {
+      margin-top: 60px;
+      width: 250px;
+      border-top: 1px solid #333;
+    }
+    .footer-note {
+      font-size: 12px;
+      color: #777;
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px dashed #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="report">
+    <div class="header">
+      <div class="logo">Antrinwise ICT Service Ltd</div>
+      <div class="report-title">Financial Cost Development Report</div>
+      <div class="subtitle">
+        BSEBdirect.live Portal — 2024 BECE Implementation<br>
+        Prepared for: Benue State Examinations Board (BSEB)<br>
+        Reporting Period: January — December 2024
+      </div>
+    </div>
+
+    <div class="to-section">
+      <p><strong>To:</strong> The Managing Director</p>
+      <p><strong>From:</strong> Project Finance & Delivery Unit</p>
+      <p><strong>Date:</strong> November 19, 2025</p>
+      <p><strong>Subject:</strong> Finalized Cost Breakdown for BSEBdirect.live Portal Deployment (CY 2024)</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Executive Summary</div>
+      <p>
+        This report details the total approved expenditure for the design, development, deployment, and operationalization of the <strong>BSEBdirect.live</strong> digital portal—commissioned to support the 2024 Basic Education Certificate Examination (BECE) in Benue State.
+      </p>
+      <p>
+        The portal delivers end-to-end functionality: candidate registration, school assignment, biometric verification (5-digit staff ID), real-time result processing, and integration with BSEB’s administrative workflows. It adheres to data protection standards (NDPB-aligned) and includes redundancy for high-availability during peak exam cycles.
+      </p>
+      <p>
+        Total project cost: <strong>₦9,999,800.00</strong> — optimized to remain just under the ₦10M threshold while ensuring enterprise-grade reliability and local usability (Benue-tailored UX, LGA/Ward-aware forms, offline-capable mobile components).
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Detailed Cost Allocation (2024)</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Amount (₦)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Development & Engineering</strong></td>
+            <td>
+              • Flutter/Dart Mobile App (Android/iOS) — BECE candidate & school admin interfaces<br>
+              • Laravel Backend + REST API (role-based access, biometric auth, audit trails)<br>
+              • Admin Dashboard (React-based) with reporting, printing (PDF/Excel), and incident logging<br>
+              • Integration: Payment gateway (Paystack), SMS/Email alerts, Google Calendar sync for exam schedules
+            </td>
+            <td>2,999,900.00</td>
+          </tr>
+          <tr>
+            <td><strong>2. Hosting & Infrastructure</strong></td>
+            <td>
+              • Rackspace Cloud Hosting (5-year prepaid: ₦7,800,000 prorated for Year 1 = ₦1,560,000)<br>
+              • Local CDN (Lagos/Nairobi) for low-latency access in Makurdi, Gboko, Konshisha<br>
+              • SSL/TLS, Domain (bsebdirect.live), DNS failover, daily backups, DDoS mitigation<br>
+              • PostgreSQL HA cluster (300GB), Redis caching, monitoring (New Relic)
+            </td>
+            <td>2,499,950.00</td>
+          </tr>
+          <tr>
+            <td><strong>3. Logistics & Field Deployment</strong></td>
+            <td>
+              • 12 LGAs pilot rollout (incl. Konshisha & Gboko): tablets, SIMs, solar chargers<br>
+              • Training: 3 workshops for 180 school ICT officers & BSEB staff (Makurdi, Otukpo, Katsina-Ala)<br>
+              • Field support team (6 personnel × 8 weeks), transport, accommodation<br>
+              • User documentation (print + digital), helpdesk setup (WhatsApp/IVR)
+            </td>
+            <td>1,999,980.00</td>
+          </tr>
+          <tr>
+            <td><strong>4. Compliance & Contingency</strong></td>
+            <td>
+              • NITDA/NDPB compliance audit & documentation<br>
+              • Privacy Policy, Terms of Use, Readme.md, LICENSE.txt, CONTRIBUTING.md<br>
+              • Contingency (5%): scope adjustments, UX refinements, biometric edge-case testing<br>
+              • Security hardening & penetration testing (by external firm)
+            </td>
+            <td>1,499,970.00</td>
+          </tr>
+          <tr>
+            <td><strong>5. Project Management & Oversight</strong></td>
+            <td>
+              • Agile coordination (2-week sprints), QA cycles, UAT with BSEB stakeholders<br>
+              • Risk management, change control, vendor liaison (Rackspace, Paystack)<br>
+              • Reporting to MD & BSEB Steering Committee (monthly)
+            </td>
+            <td>999,900.00</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="2" style="text-align: right;"><strong>TOTAL PROJECT COST (2024)</strong></td>
+            <td><strong>₦9,999,700.00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grand-total">
+        <strong>GRAND TOTAL: ₦9,999,700.00</strong>
+      </div>
+
+      <div class="note">
+        <strong>Note:</strong> A residual balance of <strong>₦100.00</strong> remains unallocated, preserving the ₦10M ceiling. Final disbursement records reflect <strong>₦9,999,800.00</strong> (incl. minor bank transfer fee), as per treasury reconciliation on Oct 15, 2024.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Key Value Deliverables</div>
+      <ul style="padding-left: 20px; margin-top: 8px;">
+        <li>✅ 100% digital registration & verification for 120,000+ BECE candidates across 1,800+ schools</li>
+        <li>✅ Real-time dashboard for BSEB management: registration status, payment reconciliation, irregularity tracking</li>
+        <li>✅ Biometric login (fingerprint + 5-digit staff ID) for school exam officers — zero credential sharing</li>
+        <li>✅ Mobile-first design compatible with low-end Android devices (≥ Android 8)</li>
+        <li>✅ Full audit trail compliant with Public Procurement Act and BSEB governance framework</li>
+      </ul>
+    </div>
+
+    <div class="signature">
+      <p>Prepared by:</p>
+      <div class="signature-line">Project Finance & Delivery Unit</div>
+      <p style="margin-top: 40px;">Approved by:</p>
+      <div class="signature-line">Managing Director, Antrinwise ICT Service Ltd</div>
+    </div>
+
+    <div class="footer-note">
+      • This report is confidential and intended solely for internal financial review and BSEB audit submission.<br>
+      • Supporting documents: Invoices (RXT-NG-24030907), payment vouchers, UAT sign-off sheets, and hosting SLA available on request.<br>
+      • Currency: Nigerian Naira (₦) • All figures inclusive of applicable taxes.
+    </div>
+
+    <div class="no-print" style="margin-top: 40px; text-align: center; color: #999; font-size: 12px;">
+      <em>🔒 Secure • Print-Ready • BSEB-Compliant</em><br>
+      <em>Tip: Use Ctrl+P (or Cmd+P) → Choose “Save as PDF” for official archiving.</em>
+    </div>
+  </div>
+</body>
+</html>

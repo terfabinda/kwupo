@@ -10,7 +10,7 @@ require 'includes/helpers.php';
 
 <?php include 'includes/header.php'; ?>
 
-<section class="hero-section">
+<section class="hero-section hero-compact">
   <div class="container">
     <div class="hero-content">
       <div class="hero-col hero-col-text">

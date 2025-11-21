@@ -323,6 +323,61 @@ a {
   border-radius: 8px;
 }
 
+
+/* ===== COMPACT HERO (for secondary pages) ===== */
+.hero-compact {
+  background: none;
+  padding: 30px 0 20px;
+  min-height: auto;
+  display: block; /* override flex */
+  position: relative;
+}
+
+.hero-compact .hero-bg-overlay {
+  display: none;
+}
+
+.hero-compact .hero-content {
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-compact .hero-col-text {
+  align-items: center;
+  text-align: center;
+}
+
+.hero-compact .logo-large {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.hero-compact h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-compact .tagline {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-compact .hero-buttons {
+  margin-top: 20px;
+}
+
+/* Hide image column on compact hero */
+.hero-compact .hero-col-image {
+  display: none;
+}
+
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
@@ -407,32 +462,96 @@ a {
   border-radius: 4px;
 }
 
-/* Exco */
+/* ===== EXECUTIVE COMMITTEE ===== */
 .exco-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
-  margin: 30px 0;
+  /* Use auto-fit + minmax for flexible, centered columns */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  margin: 40px auto; /* Centered with top/bottom margin */
+  max-width: 1800px; /* Prevent overstretch on ultra-wide screens */
+  padding: 0 10px;   /* Small side padding for breathing room */
 }
 
-.exco-placeholder {
-  height: 100px;
-  background: #eee;
-  border-radius: 8px;
+.exco-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 15px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Ensure cards don't shrink too much */
+  min-width: 200px;
 }
 
+.exco-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.exco-image-container {
+  margin-bottom: 18px;
+}
+
+.exco-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  display: block;
+}
+
+.exco-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 12px 0 8px;
+  color: var(--black);
+  line-height: 1.3;
+}
+
+.exco-designation {
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Tablet: 3 columns */
 @media (max-width: 992px) {
-  .exco-grid { grid-template-columns: repeat(3, 1fr); }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .exco-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 0 15px;
+  }
+  
+  .exco-image {
+    width: 110px;
+    height: 110px;
+  }
 }
 
+/* Mobile: 2 columns */
 @media (max-width: 576px) {
-  .exco-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats-grid { grid-template-columns: 1fr; }
-  .btn { padding: 10px 20px; font-size: 0.95rem; }
-  .hero-col-text h1 { font-size: 2.8rem; }
-  .tagline { font-size: 1.4rem; }
+  .exco-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .exco-card {
+    padding: 22px 12px;
+  }
+  
+  .exco-image {
+    width: 95px;
+    height: 95px;
+  }
 }
+
+
 
 /* Pillars */
 .pillars-grid {
@@ -1236,4 +1355,210 @@ textarea:focus {
 textarea.error {
   border-color: #c62828;
   background-color: #ffebee;
+}
+
+/* ===== ROYAL FATHERS SECTION ===== */
+.royal-fathers-section {
+  border-top: 8px solid var(--accent); /* Thicker top border */
+  padding-top: 60px;
+  margin-top: 40px;
+  background-color: #fafafa; /* Optional: subtle bg to make them stand out */
+}
+
+.royal-fathers-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 50px 0 60px;
+}
+
+.royal-card {
+  text-align: center;
+  flex: 1;
+  min-width: 280px;
+  max-width: 340px;
+  padding: 0 15px;
+}
+
+.royal-card.center {
+  flex: 1.6;
+  position: relative;
+}
+
+.royal-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Solid ring halo — now larger & bolder */
+.royal-card.center .royal-image-container::before {
+  content: '';
+  position: absolute;
+  width: 320px;       /* ← Increased from 200px */
+  height: 320px;      /* ← Matches new scale */
+  border-radius: 50%;
+  border: 8px solid var(--accent); /* Thicker ring */
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Profile images — substantially enlarged */
+.royal-image {
+  width: 200px;        /* ← Increased from 140px */
+  height: 200px;       /* ← Now truly prominent */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.royal-card.center .royal-image {
+  width: 260px;        /* ← From 160px → 260px (heroic scale) */
+  height: 260px;
+  border-width: 5px;
+}
+
+.royal-image:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 25px rgba(165, 42, 42, 0.25); /* Accent-tinted glow on hover */
+}
+
+/* Text — slightly enlarged for balance */
+.royal-name {
+  font-family: "Vollkorn", Georgia, serif;
+  font-size: 1.6rem;   /* ← Increased */
+  margin: 20px 0 12px;
+  color: var(--black);
+  line-height: 1.3;
+}
+
+.royal-name small {
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #555;
+  display: block;
+  margin-top: 6px;
+}
+
+.royal-title {
+  font-weight: 700;
+  color: var(--accent);
+  display: inline-block;
+  font-size: 1.4rem;  /* ← Slightly larger */
+  margin-top: 6px;
+}
+
+.royal-designation {
+  font-size: 1.05rem; /* ← Increased for readability */
+  color: #444;
+  margin: 8px 0 0;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Desktop spacing refinement */
+@media (min-width: 1200px) {
+  .royal-fathers-grid {
+    gap: 60px;
+  }
+  
+  .royal-card.center .royal-image-container::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .royal-card.center .royal-image {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .royal-fathers-section {
+    padding-top: 50px;
+  }
+
+  .royal-card.center .royal-image-container::before {
+    width: 280px;
+    height: 280px;
+  }
+
+  .royal-card.center .royal-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .royal-image {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+/* Mobile — stack & scale down gracefully */
+@media (max-width: 768px) {
+  .royal-fathers-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .royal-card {
+    max-width: 100%;
+    min-width: auto;
+  }
+
+  .royal-card.center .royal-image-container::before {
+    width: 260px;
+    height: 260px;
+  }
+
+  .royal-card.center .royal-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .royal-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .royal-name {
+    font-size: 1.5rem;
+  }
+
+  .royal-title {
+    font-size: 1.3rem;
+  }
+}
+
+.exec-intro .lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.exec-intro .highlight {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 15px 0 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 25px 0;
+}
+
+@media (max-width: 768px) {
+  .exec-intro .lead {
+    font-size: 1.15rem;
+  }
 }

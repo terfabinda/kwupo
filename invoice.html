@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rackspace Technologies — Hosting Invoice</title>
+  <style>
+    @media print {
+      body { -webkit-print-color-adjust: exact; }
+      .no-print { display: none; }
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fafafa;
+    }
+    .invoice-box {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #0078D7;
+      padding-bottom: 20px;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0078D7;
+    }
+    .logo span { color: #000; }
+    .invoice-details {
+      text-align: right;
+    }
+    .invoice-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #222;
+      margin: 0;
+    }
+    .invoice-meta {
+      margin-top: 8px;
+      color: #666;
+    }
+    .section {
+      margin: 30px 0;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #0078D7;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #eee;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    th {
+      background-color: #f5f9ff;
+      font-weight: 600;
+      color: #005a9e;
+    }
+    td{
+      font-size: small;
+    }
+    .total-row {
+      font-weight: bold;
+      background-color: #f0f7ff;
+    }
+    .footer-note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px dashed #ccc;
+    }
+    .stamp {
+      text-align: center;
+      margin-top: 30px;
+      font-weight: bold;
+      color: green;
+    }
+    .currency-note {
+      font-size: 12px;
+      color: #888;
+      font-style: italic;
+      margin-top: -10px;
+    }
+    .highlight {
+      background-color: #fff9db;
+    }
+  </style>
+</head>
+<body>
+  <div class="invoice-box">
+    <div class="header">
+      <div>
+        <div class="logo">Rackspace<span>®</span> Technologies</div>
+        <div style="margin-top: 6px; color: #555; font-size: 14px;">
+          1 Fanatical Place • San Antonio, TX 78218 • USA<br>
+          support@rackspace.com • www.rackspace.com
+        </div>
+      </div>
+      <div class="invoice-details">
+        <div class="invoice-title">OFFICIAL RECEIPT / INVOICE</div>
+        <div class="invoice-meta">
+          <div>Receipt No: RXT-NG-24030907</div>
+          <div>Date: March 9, 2024 • 07:21:40 AM EST</div>
+          <div>Valid for 5 Years: Mar 9, 2024 – Mar 8, 2029</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">BILL TO</div>
+      <div>
+        <strong>Antrinwise ICT Service Ltd</strong><br>
+        No. 10 J. S. Tarka Way<br>
+        Makurdi, Benue State<br>
+        Nigeria • Zip Code: 900001
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">SERVICE DESCRIPTION</div>
+      <p>
+        Enterprise Cloud Hosting & Managed Services Package for <strong>bsebdirect.live</strong>, 
+        including domain registration, security, compliance, and premium support over 5 years.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">ITEMIZED BREAKDOWN (5-YEAR TERM)</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price (USD)</th>
+            <th style="width:40px;">Qty</th>
+            <th>Total (USD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dedicated Cloud Server</td>
+            <td>Custom-configured Rackspace Dedicated Cloud Instance (12 vCPU, 48GB RAM, 1.5TB SSD), 99.99% SLA, DDoS Protection, 24/7 Fanatical Support™</td>
+            <td>$1,520.00</td>
+            <td>5 yrs</td>
+            <td>$7,600.00</td>
+          </tr>
+          <tr>
+            <td>Domain Registration</td>
+            <td><code>bsebdirect.live</code> — 5-year registration + WHOIS privacy + DNS management</td>
+            <td>$35.00</td>
+            <td>1</td>
+            <td>$35.00</td>
+          </tr>
+          <tr>
+            <td>Managed Security Suite</td>
+            <td>Rackspace Managed Security: WAF, SIEM, Vulnerability Scanning, Quarterly Reports</td>
+            <td>$340.00</td>
+            <td>5 yrs</td>
+            <td>$1,700.00</td>
+          </tr>
+          <tr>
+            <td>Backup & DR</td>
+            <td>Daily encrypted backups (30-day retention) + Geo-redundant disaster recovery (EU)</td>
+            <td>$230.00</td>
+            <td>5 yrs</td>
+            <td>$1,150.00</td>
+          </tr>
+          <tr>
+            <td>Compliance Support</td>
+            <td>GDPR/NDPB readiness, Annual audit documentation, ISO 27001 alignment</td>
+            <td>$155.00</td>
+            <td>5 yrs</td>
+            <td>$775.00</td>
+          </tr>
+          <tr>
+            <td>Managed Database (PostgreSQL)</td>
+            <td>High-Availability PostgreSQL (1 primary + 1 replica), 300GB, Automated maintenance</td>
+            <td>$255.00</td>
+            <td>5 yrs</td>
+            <td>$1,275.00</td>
+          </tr>
+          <tr>
+            <td>DevOps Enablement</td>
+            <td>Monthly CI/CD reviews, Kubernetes optimization, Flutter/Dart deployment support</td>
+            <td>$125.00</td>
+            <td>5 yrs</td>
+            <td>$625.00</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="4" style="text-align: right;">Subtotal (USD):</td>
+            <td>$13,160.00</td>
+          </tr>
+          <tr class="total-row highlight">
+            <td colspan="4" style="text-align: right;">Discount (61.2%):</td>
+            <td>–$8,045.25</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="4" style="text-align: right; font-size: 18px;">TOTAL DUE (USD):</td>
+            <td style="font-size: 18px;">$5,114.75</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="currency-note" style="margin-top: 10px;">
+        * Exchange Rate (Mar 9, 2024): <strong>₦1,525.00 = $1.00</strong> → <strong>Total in Naira: ₦7,800,000.00</strong>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">PAYMENT DETAILS</div>
+      <p>
+        <strong>Payment Method:</strong> Bank Transfer (USD)<br>
+        <strong>Account Name:</strong> Rackspace Technologies Inc.<br>
+        <strong>Bank:</strong> JPMorgan Chase Bank, N.A. • New York, NY<br>
+        <strong>SWIFT/BIC:</strong> CHASUS33<br>
+        <strong>Reference:</strong> RXT-NG-24030907 / bsebdirect.live
+      </p>
+    </div>
+
+    <div class="footer-note">
+      <p>
+        • This receipt confirms full payment for the 5-year service term.<br>
+        • Domain <code>bsebdirect.live</code> is registered and locked to Antrinwise ICT Service Ltd.<br>
+        • All services commence March 9, 2024. Renewal notice will be sent 60 days prior to expiry.<br>
+        • Includes 24/7 Fanatical Support™, dedicated account manager, and quarterly reviews.<br>
+        • Infrastructure hosted in Rackspace London & Frankfurt data centers (low-latency to Nigeria).
+      </p>
+    </div>
+
+    <div class="stamp">
+      ✅ PAYMENT RECEIVED • SERVICE ACTIVATED<br>
+      <small>Authorized Signature: _________________________</small>
+    </div>
+
+    <div class="no-print" style="margin-top: 30px; text-align: center; color: #888; font-size: 12px;">
+      <em>Tip: Use Ctrl+P (Cmd+P on Mac) → Choose "Save as PDF" to export.</em>
+    </div>
+  </div>
+</body>
+</html>

@@ -10,7 +10,7 @@ require_once __DIR__ . '/helpers.php';
     <div class="container">
       <div class="footer-content">
         <div>
-          <img src="<?= base_url('assets/img/logo-60.png') ?>" alt="KWUPO" class="footer-logo">
+          <!-- <img src="<?= base_url('assets/img/logo-120.png') ?>" alt="KWUPO" class="footer-logo"> -->
         </div>
         <div class="footer-links">
           <h3>Quick Links</h3>
