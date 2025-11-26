@@ -5,6 +5,15 @@ $is_admin = ($role_id == 1);
 $is_finance = ($role_id == 2);
 $is_member = ($role_id == 3);
 
+$path_prefix = '';
+if ($is_admin) {
+    $path_prefix = 'admin/';
+} elseif ($is_finance) {
+    $path_prefix = 'finance/'; // adjust if needed
+} elseif ($is_member) {
+    $path_prefix = 'member/';
+}
+
 // Determine correct path to settings.php
 // If current page is in /member/, use relative 'settings.php'
 // Otherwise (admin/finance), use '../member/settings.php'
